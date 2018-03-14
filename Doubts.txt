@@ -1,0 +1,18 @@
+doubts:-
+
+1) income in customer??
+2) emp_dependent entries?
+3) branch me changes krne hain
+4) account me creation date
+5) installment ki 2 tables??
+6) INSTALLMENT_NO_INSURANCE(transactions) ??
+
+
+-> loan acc no - 14 digits
+-> POLICY NO - 11 DIGITS
+-> tid - 10 digits
+-> acc no - 11 digits
+-> receipt no - 14 digits
+
+LOAN_Installment me status n penalty??
+
