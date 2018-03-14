@@ -1,0 +1,29 @@
+in put branch , date 
+\\ FD
+\\input
+select  s  from (select sum ( deposit amount)  as s   , ifsc_code , creation_date  group by  ifsc_code ,  creation_date)   where creation_date  = day ifs_code = input branch  
+// output 
+select s from ( select sum(amount_on_maturity) as s ,ifsc code premium
+_start_date  group by ifs_code , premium_start_date from fixed deposit ) where premium_start_date  = day ifs_code = input branch
+\\ insurance 
+// output
+select  s  from (select sum ( deposit amount)  as s   , mature_date ifsc_code  group by  ifsc_code ,  Mature_date from insurance  )   where mature_ date  = day ifs_code = input branch 
+ 
+\\ input 
+select s from( select sum(instalment.amount) as s , instalment_date from installment
+natural join instalment group by ifs_code , instalment_date)   where  instalment_date
+ = day ifsc_code = input branch 
+
+\\loan
+\\output
+select s from (select sum ( amount)  as s  ,reimbursement_date
+ , ifsc_code  group by  ifsc_code , reimbursement_date from insurance ) where 
+reimbursement_date = day , ifsc_code = input branch
+
+\\input
+select s from( select sum (amount_paid) as s , repayment_date , ifs_code group by 
+ repayment_date , ifs_code from instalment_loan ) where  repayment_date = day,ifsc_code = input branch
+
+
+
+

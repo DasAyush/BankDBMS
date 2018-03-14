@@ -1,0 +1,27 @@
+11.input employee_id = e_id 
+ select count(*) from employee_dependents where relationship = 'daughter or relation
+ship = 'son' and employee_id = emp_id ;
+amount =0;
+if (count < = 2 )
+{// daughters 
+ select count(*)  as c from employee_dependents where relationship = 'daughter’ and employee_id = emp_id ; 
+amount = amount + c*2500
+// son
+select count(*)  as c from employee_dependents where relationship = ’son’ and employee_id = emp_id ; 
+amount = amount + c*1500
+
+}
+
+
+if (c>2)
+{
+ select relationship from from from employee_dependents where relationship = 'daughter or relationship = 'son' and employee_id = emp_id ; sort by dob_of_dependent
+for(first two rows )
+{
+if(relationship='son')
+amount = amount + c*1500
+else
+amount = amount + c*2500
+
+}
+}

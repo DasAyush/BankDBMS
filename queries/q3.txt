@@ -1,0 +1,15 @@
+ 7.input month =m, year ,account no. = a 
+\\current balance 
+select balance from account where accoun_no. = a 
+select balance from account where account no. = a 
+select (day from date)  from transaction where account_no= a , 1<day<10 and month =m
+if(null)
+{
+select max time stamp as t from (select * from transaction  where  account_no = a and month = m-1)
+select balance from transaction where account_no = a and timestamp = t
+}
+select interest_rate from account natural join account_type where account_no =a
+
+amount_to_be_added  = balance*interest_rate  - sms_charges ;
+
+update balance = current balance  + amount_to_be_added  where account_no = a 

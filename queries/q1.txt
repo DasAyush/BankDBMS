@@ -1,0 +1,32 @@
+INPUT account no. = p_account_no
+select * from transactions where account no. = p_account_no or to_account_no= p_account_no where date>= Creation_date
+
+2.INPUT Loan_Account_no. =p_loan_account_no
+select * from loan as L natural join instalment as I where loan_account_no = p_loan_account_no
+
+
+3.input = card no. =c  , date = d  
+// find no. of transactions… in this month …. all transactions of today..
+ free transaction = 3 - count(*)
+  (select count(*) as count  , card no .from transactions where card_no = c and 1st 0f that month<date<d )  
+
+if balance>100000 then free
+(select  balance from card  natural join account  where card_no = c )
+ 
+// 
+
+
+AMOUNT 
+\\ tota l amount 
+ 
+( select a , from   ( select   sum(amount)  as a, card no  from transactions group by card_no.  where  date = d )  where card no. = c; 
+select limit from card where cardno. = c;
+
+if(a<limit)
+{
+ if(limit - a < balance)
+  then amount_can_be_withdrawn = balance
+else 
+ amount_can_be_withdrawn
+  = limit - a 
+}
